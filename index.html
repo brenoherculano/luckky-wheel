@@ -10,7 +10,7 @@
 <body class="bg-black text-light text-center">
     <!-- Modal -->
     <div class="modal fade" id="itemsListModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
                     <div class="col text-center">
@@ -86,10 +86,24 @@
         </div>
     </div>
 
-    <!-- Cards -->
-    <div class="row" id="cards">
+    <div class="row">
+        <div class="col text-center">
+            <a href="./index.html" class="btn btn-outline-danger mt-3">Reset</a>
+        </div>
+    </div>
+    <div class="container rounded p-3 pb-0 bg-success bg-opacity-50 border border-light mt-5">
+        <!-- Cards -->
+        <div class="row" id="cards">
+        </div>
     </div>
 </body>
+<footer>
+    <div class="footer row shadow-lg bg-dark text-light" style="position: fixed; bottom: 0; width: 100%; height: 40px;">
+        <div class="col text-center">
+            <p onclick="alert('Thank u, yy')" class="fw-bold link-primary" style="cursor: pointer;">yy💚</p>
+        </div>
+    </div>
+</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 <script>
 
@@ -182,15 +196,15 @@
         const cardTitleH5 = document.createElement('h5');
         const cardTextP = document.createElement('p');
 
-        colDiv.className = 'card-container col-12 col-lg-2 mb-2';
-        cardVerseDiv.className = 'card card-front text-black align-items-center bg-primary';
+        colDiv.className = 'card-container col-12 col-md-4 col-lg-3 col-xl-2 mb-3';
+        cardVerseDiv.className = 'card card-front text-black align-items-center bg-primary shadow';
         cardVerseBodyDiv.className = 'card-body';
         cardVerseSymbolH1.className = 'm-5';
-        cardDiv.className = 'card card-backs text-black';
+        cardDiv.className = 'card card-backs text-black shadow';
         cardHeaderDiv.className = 'card-header';
         cardBodyDiv.className = 'card-body';
-        cardTitleH5.className = 'card-title';
-        cardTextP.className = 'card-text';
+        cardTitleH5.className = 'card-title mt-3';
+        cardTextP.className = 'card-text mt-4 shadow rounded';
 
         cardVerseSymbolH1.innerText = '☘️';
         cardHeaderDiv.innerText = headerText;

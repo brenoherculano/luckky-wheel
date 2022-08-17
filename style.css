@@ -1,0 +1,38 @@
+.container {
+    min-height: 800px;
+}
+
+.card-container {
+    height: 300px;
+    animation-name: slideInCard;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+}
+.card {
+    width: 200px;
+    height: 300px;
+    transition: all 0.5s;
+    perspective: 800px;
+    backface-visibility: hidden;
+}
+
+.card-backs {
+    transform: rotateY(180deg) translateY(-100%);
+}
+.card-container:active .card-front {
+    transform: rotateY(180deg);
+}
+
+.card-container:active .card-backs {
+    transform: rotateY(0deg) translateY(-100%);
+}
+
+@keyframes slideInCard {
+    from {
+        opacity: 0;
+        transform: translateX(700%) rotate(-20deg);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
